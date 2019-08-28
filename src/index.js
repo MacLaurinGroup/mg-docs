@@ -17,10 +17,12 @@ const fileInsts = [];
 
 
 const buildDocs = async () => {
-    const files = await readdir(inputFilePath)
+    console.log('Building docs...');
+
+    const files = await readdir(inputFilePath);
     files.forEach(fileName => {
         if(fileName.includes('.html')) {
-            fileInsts.push(new FileClass(inputFilePath, fileName))
+            fileInsts.push(new FileClass(inputFilePath, fileName));
         }
     });
     

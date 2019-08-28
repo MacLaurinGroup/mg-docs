@@ -1,0 +1,19 @@
+{
+  "name": "mg-docs",
+  "version": "1.0.0",
+  "description": "Simple documentation generator written in Node that allows you to write documentation on a page by page basis.",
+  "main": "src/index.js",
+  "scripts": {
+    "build": "node src/index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MacLaurinGroup/mg-docs.git"
+  },
+  "author": "MacLaurin Group",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/MacLaurinGroup/mg-docs/issues"
+  },
+  "homepage": "https://github.com/MacLaurinGroup/mg-docs#readme"
+}

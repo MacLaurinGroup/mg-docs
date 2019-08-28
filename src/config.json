@@ -7,8 +7,8 @@
     },
     "page": {
         "title": "MG Docs",
-        "heading": "Safety Serve Documentation",
-        "introText": "This is safety serve documentation."
+        "heading": "mg-docs demo",
+        "introText": "This documentation has been generated automatically."
     },
     "pageBlock": {
         "containerClass": "mg-docs-page-blocks",
