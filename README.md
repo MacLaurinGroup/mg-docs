@@ -47,3 +47,6 @@ An example of a documentation snippet in an html file:
   </mg:body>
 </mg:docs>
 ```
+
+will produce:
+![mg-docs demo](/images/demo.jpg)
