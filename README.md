@@ -15,21 +15,21 @@ inputDir | should point to the folder with html files for the program to run thr
 An example of a documentation snippet in an html file:
 ```
 <mg:docs>
-	<mg:title>Docs header</mg:title>
-	<mg:body>
-		docs body
-		<mg:section>
-			<mg:sectionhead>Subsection A</mg:sectionhead>
-			<mg:sectionbody>
-				this is subsection A body
-			</mg:sectionbody>
-		</mg:section>
-		<mg:section>
-			<mg:sectionhead>Subsection B</mg:sectionhead>
-			<mg:sectionbody>
-				this is subsection B body
-			</mg:sectionbody>
-		</mg:section>
-	</mg:body>
+  <mg:title>Docs header</mg:title>
+  <mg:body>
+    docs body
+    <mg:section>
+      <mg:sectionhead>Subsection A</mg:sectionhead>
+      <mg:sectionbody>
+	this is subsection A body
+      </mg:sectionbody>
+    </mg:section>
+    <mg:section>
+      <mg:sectionhead>Subsection B</mg:sectionhead>
+      <mg:sectionbody>
+	this is subsection B body
+      </mg:sectionbody>
+    </mg:section>
+  </mg:body>
 </mg:docs>
 ```
