@@ -1,5 +1,5 @@
 # mg-docs
-A tool that runs through html files and produces a documentation file.
+A simple node package that runs through html files and produces a documentation file.
 
 ## Installation
 In the root folder of your project with your `package.json` run:
