@@ -8,7 +8,11 @@ npm install mg-docs --save-dev
 ```
 
 ## Configuration
-There is a `config.json` file in root folder which has parameters you can set up to customize the end documentation page.
+<<<<<<< Updated upstream
+There is a sample `config.json` in the root folder which has parameters you can set up to configure the end documentation page.
+=======
+There is a sample `config.json` file in `src` folder which has parameters you can set up to customize the end documentation page.
+>>>>>>> Stashed changes
 
 The following params are necessary for the program to run.
 
@@ -29,7 +33,17 @@ logo | contains src and url parameters that allow you to set the logo's source a
 
 ## To build
 
-In order to build the html file with the documentation you will need to configure the `config.json` shown above, then you can run: 
+In order to build the html file with the documentation you will need to configure the `config.json` shown above. If you are using a custom configuration file, you will need to specify the new path in the `package.json` like so:
+
+```
+...
+    "scripts": {
+        "build": "node src/index.js your/new/path.json
+    }
+...
+```
+
+then you can run: 
 ```
 npm run build
 ```

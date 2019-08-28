@@ -4,7 +4,7 @@
   "description": "Simple documentation generator written in Node that allows you to write documentation on a page by page basis.",
   "main": "src/index.js",
   "scripts": {
-    "build": "node src/index.js"
+    "build": "node src/index.js ../config.json"
   },
   "repository": {
     "type": "git",
