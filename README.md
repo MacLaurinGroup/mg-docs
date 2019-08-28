@@ -4,7 +4,7 @@ A simple node package that runs through html files and produces a documentation 
 ## Installation
 In the root folder of your project with your `package.json` run:
 ```
-npm install mg-docs
+npm install mg-docs --save-dev
 ```
 
 ## Configuration
