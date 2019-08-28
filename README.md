@@ -8,7 +8,7 @@ npm install mg-docs --save-dev
 ```
 
 ## Configuration
-There is a `config.json` file in `src` folder which has parameters you can set up to customize the end documentation page.
+There is a `config.json` file in root folder which has parameters you can set up to customize the end documentation page.
 
 The following params are necessary for the program to run.
 
