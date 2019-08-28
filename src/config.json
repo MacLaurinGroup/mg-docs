@@ -1,0 +1,47 @@
+{
+    "outputFile": "./output/index.html",
+    "inputDir": "../web-admin/src/admin",
+    "logo": {
+        "url": "http://maclaurin.group",
+        "src": "./logo.png"
+    },
+    "page": {
+        "title": "MG Docs",
+        "heading": "Safety Serve Documentation",
+        "introText": "This is safety serve documentation."
+    },
+    "pageBlock": {
+        "containerClass": "mg-docs-page-blocks",
+        "class": "mg-docs-section",
+        "header": {
+            "class": ""
+        },
+        "body": {
+            "class": ""
+        },
+        "section": {
+            "class": "mg-docs-subsection",
+            "header": {
+                "class": ""
+            },
+            "body": {
+                "class": ""
+            }
+        }
+    },
+    "sideBar": {
+        "containerClass": "mg-docs-sidebar",
+        "header": {
+            "class": "mg-docs-header"
+        },
+        "contentsTable" : {
+            "class": "mg-docs-contents",
+            "header": {
+                "class": ""
+            },
+            "listItem": {
+                "class": ""
+            }
+        }
+    }
+}

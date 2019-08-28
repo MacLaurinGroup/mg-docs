@@ -1,0 +1,159 @@
+html, body {
+    margin: 0;
+    padding: 0;
+    font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";
+    background: #f7f6f6;
+    scroll-behavior: smooth;
+}
+
+.mg-docs-sidebar {
+    position: fixed;
+    left: 0;
+    top: 3.5rem;
+    height: 100%;
+    width: 18rem;
+}
+
+.mg-docs-page-blocks {
+    position: relative;
+    left: 18rem;
+    top: 0;
+    width: 45rem;
+    background-color: white;
+    padding: 3rem;
+}
+
+.mg-docs-page-blocks h3 {
+    font-size: 1.5rem;
+}
+
+.mg-docs-contents {
+    background-color: #473636;
+    height: inherit;
+    padding-top: 1rem;
+}
+
+.mg-docs-contents h3 {
+    color: white;
+    margin-top: 0;
+    padding-left: 1.1rem;
+}
+
+.mg-docs-contents ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.mg-docs-contents ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 0.9rem;
+    transition: all 0.2s;
+}
+
+.mg-docs-contents ul li {
+    padding: 0.2rem;
+    padding-left: 2rem;
+}
+
+.mg-docs-contents ul a:hover {
+    color: hsla(0, 0%, 64%, 17);
+}
+
+.mg-docs-subsection h3 {
+    font-size: 1.2rem;
+}
+
+.mg-docs-header {
+    background-color: hsl(0, 0%, 100%);
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 999;
+    height: 4rem;
+    box-shadow: #0000006e 0px 3px 10px;
+}
+
+.mg-docs-header img {
+    height: 4rem;
+    margin: 0rem 0 0 0.5rem;
+}
+
+.mg-docs-header h1 {
+    margin: 0;
+    margin-bottom: 4rem;
+    color: white;
+}
+
+
+/* SEARCH BAR */
+
+.mg-docs-search {
+    display: inline-block;
+    position: absolute;
+    left: 50%;
+    width: 25rem;
+    margin-left: -12.5rem;
+    margin-top: 0.9rem;
+}
+
+.mg-evt-docs-search-input {
+    width: 100%;
+    height: 2rem;
+    background-color: hsla(0, 0%, 93%, 1);
+    border: none;
+    padding-left: 1rem;
+    border-radius: 0.2rem;
+}
+
+.mg-evt-docs-search-button button {
+    display: inline-block;
+    margin-bottom: 0;
+    text-align: center;
+    -ms-touch-action: manipulation;
+    touch-action: manipulation;
+    cursor: pointer;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    line-height: 1.25;
+    padding: .5rem .75rem;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    color: #555;
+}
+
+.mg-docs-search-results {
+    width: 25rem;
+    background-color: white;
+    position: absolute;
+    top: 2rem;
+    margin-left: -1px;
+    border: 1px solid #e8e9ed;
+}
+
+.mg-docs-search-results a {
+    text-decoration: none;
+}
+
+.mg-evt-docs-search-result {
+    list-style: none;
+    padding: 0.4rem 0.3rem;
+    color: black;
+}
+
+.mg-evt-docs-search-result:hover {
+    background-color:#e4e4e4;
+    cursor: default;
+}
+
+.mg-docs-section {
+    margin-top: -4rem;
+    padding-top: 4rem;
+}
+
+.hide {
+    display: none;
+}
