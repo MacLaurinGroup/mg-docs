@@ -1,9 +1,9 @@
-const config = require('../../config.json')
+const config = require('../../../config.json')
 
 class ListItem {
     getHTML(options) {
         return `
-        <li class="${config.sideBar.contentsTable.listItem.class}">
+        <li>
             <a href="#${options.hrefToC}">${options.title}</a>
         </li>
         `

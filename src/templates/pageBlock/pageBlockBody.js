@@ -1,9 +1,9 @@
-const config = require('../../config.json');
+const config = require('../../../config.json');
 
 class PageBlockBody {
     getHTML(text, items) {
         let html = `
-        <p class="${config.pageBlock.body.class}">${text}</p>
+        <p>${text}</p>
         `
         if(items.length > 0) {
             items.forEach(item => {

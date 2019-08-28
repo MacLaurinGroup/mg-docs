@@ -1,7 +1,7 @@
 const template = require('./templates/template')
 const fs = require('fs');
 const util = require('util');
-const config = require('./config.json')
+const config = require('../config.json')
 
 const writeFile = util.promisify(fs.writeFile)
 
@@ -78,7 +78,7 @@ module.exports = class FileBuilder {
         const optionsHTML = this.getSaveOptions()
 
         return html += `
-            <div class="${config.sideBar.header.class}">
+            <div class="${config.sideBar.headerClass}">
                 <a href="${config.logo.url}" target="_blank">
                     <img src="${config.logo.src}" />
                 </a>

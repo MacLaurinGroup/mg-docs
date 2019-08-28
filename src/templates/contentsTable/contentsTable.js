@@ -1,5 +1,5 @@
 const listItem = require('./listItem');
-const config = require('../../config.json');
+const config = require('../../../config.json');
 
 class ContentsTable {
     constructor() {
@@ -7,7 +7,7 @@ class ContentsTable {
     }
 
     getOpenHTMLTag() {
-        return `<ul class="${config.sideBar.contentsTable.class}">`
+        return `<ul>`
     }
 
     getCloseHTMLTag() {
@@ -27,8 +27,8 @@ class ContentsTable {
 
     getHTML(options) {
         return `
-            <div class="${config.sideBar.contentsTable.class}">
-                <h3 class="${config.sideBar.contentsTable.header.class}">Contents</h3>
+            <div class="${config.sideBar.contentsTableClass}">
+                <h3>Contents</h3>
                 ${this.getOpenHTMLTag()}
                     ${this.getListItems(options.items)}
                 ${this.getCloseHTMLTag()}

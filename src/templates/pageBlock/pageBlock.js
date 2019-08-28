@@ -1,6 +1,6 @@
 const pageBlockHeader = require('./pageBlockHeader');
 const pageBlockBody = require('./pageBlockBody');
-const config = require('../../config.json');
+const config = require('../../../config.json');
 
 class PageBlock {
     constructor() {

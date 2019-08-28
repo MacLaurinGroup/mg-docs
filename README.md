@@ -24,6 +24,7 @@ Parameter | Description
 page | contains parameters that allow you to set the title, heading and heading paragraph text of the document.
 pageBlock | contains parameters that allow you to set up custom CSS classes to the documentation elements.
 sideBar | contains parameters that allow you to set up custom CSS classes to the side bar elements.
+logo | contains src and url parameters that allow you to set the logo's source and the url link for clicking the logo.
 
 
 ## To build

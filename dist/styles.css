@@ -21,6 +21,7 @@ html, body {
     width: 45rem;
     background-color: white;
     padding: 3rem;
+    padding-top: 5rem;
 }
 
 .mg-docs-page-blocks h3 {

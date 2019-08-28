@@ -1,6 +1,6 @@
 const pageBlockSectionHeader = require('./pageBlockSectionHeader');
 const pageBlockSectionBody = require('./pageBlockSectionBody');
-const config = require('../../../config.json');
+const config = require('../../../../config.json');
 
 class PageBlock {
     constructor() {
@@ -9,7 +9,7 @@ class PageBlock {
     }
 
     getOpenHTMLTag(id) {
-        return `<section id="${id}" class="${config.pageBlock.section.class}">`
+        return `<section id="${id}" class="${config.pageBlock.subsectionClass}">`
     }
 
     getCloseHTMLTag() {

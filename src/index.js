@@ -5,7 +5,7 @@
 const fs = require('fs');
 const utils = require('util');
 const readdir = utils.promisify(fs.readdir);
-const config = require('./config.json');
+const config = require('../config.json');
 
 const FileClass = require('./fileClass');
 const FileBuilder = require('./fileBuilder');
