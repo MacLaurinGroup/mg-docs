@@ -49,4 +49,4 @@ An example of a documentation snippet in an html file:
 ```
 
 will produce:
-![mg-docs demo](/images/demo.jpg)
+![mg-docs demo](/images/mg-docs-demo.jpg)
