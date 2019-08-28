@@ -7,8 +7,8 @@ In the root folder of your project with your `package.json` run:
 npm install mg-docs
 ```
 
-## Setup
-There is a config file in `src` folder which has parameters you can set up to customize the end documentation page.
+## Configuration
+There is a `config.json` file in `src` folder which has parameters you can set up to customize the end documentation page.
 
 The following params are necessary for the program to run.
 
@@ -16,6 +16,15 @@ Parameter | Description
 ------------ | ---------
 outputFile | should point to a html file where the documentation will be created
 inputDir | should point to the folder with html files for the program to run through
+
+The following params are to help with customizing the end documentation page.
+
+Parameter | Description
+------------ | ---------
+page | contains parameters that allow you to set the title, heading and heading paragraph text of the document.
+pageBlock | contains parameters that allow you to set up custom CSS classes to the documentation elements.
+sideBar | contains parameters that allow you to set up custom CSS classes to the side bar elements.
+
 
 ## To build
 
