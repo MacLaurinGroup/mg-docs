@@ -1,6 +1,6 @@
 {
-    "outputFile": "./output/index.html",
-    "inputDir": "../web-admin/src/admin",
+    "outputFile": "./dist/index.html",
+    "inputDir": "/home/richmonddev/ss/web-admin/src/admin",
     "logo": {
         "url": "http://maclaurin.group",
         "src": "./logo.png"
