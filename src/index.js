@@ -25,12 +25,20 @@ try {
 }
 configValidator(config);
 
+const configPath = process.argv[2];
+let config;
+
+try {
+  config = require(configPath);
+} catch(e) {
+  throw new Error('Config file not found!');
+}
+
+configValidator(config);
+
 let inputFilePath = config.inputDir;
 let outputFilePath = config.outputFile;
 const fileInsts = [];
-
-
-
 
 const buildDocs = async () => {
   console.log('Building docs...');

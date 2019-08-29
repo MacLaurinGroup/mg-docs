@@ -8,7 +8,11 @@ npm install mg-docs --save-dev
 ```
 
 ## Configuration
+<<<<<<< Updated upstream
 There is a sample `config.json` in the root folder which has parameters you can set up to configure the end documentation page.
+=======
+There is a sample `config.json` file in `src` folder which has parameters you can set up to customize the end documentation page.
+>>>>>>> Stashed changes
 
 The following params are necessary for the program to run.
 
