@@ -1,23 +1,29 @@
 {
   "outputFile": "./dist/index.html",
   "inputDir": "./test",
-  "logo": {
-    "url": "http://maclaurin.group",
-    "src": "./logo.png"
-  },
-  "page": {
-    "title": "MG Docs",
-    "heading": "mg-docs demo",
-    "introText": "This documentation has been generated automatically."
-  },
-  "pageBlock": {
-    "containerClass": "mg-docs-page-blocks",
-    "class": "mg-docs-section",
-    "subsectionClass": "mg-docs-subsection"
-  },
-  "sideBar": {
-    "containerClass": "mg-docs-sidebar",
-    "headerClass": "mg-docs-header",
-    "contentsTableClass": "mg-docs-contents"
+  "includeTags": [],
+  "excludeTags": [],
+  "pageConfig": {
+    "logo": {
+      "url": "http://maclaurin.group",
+      "src": "./logo.png"
+    },
+    "header": {
+      "title": "MG Docs",
+      "heading": "mg-docs demo",
+      "introText": "This documentation has been generated automatically.",
+      "jsFiles": ["./jquery.min.js", "./index.js"],
+      "cssFiles": ["./styles.css"]
+    },
+    "pageBlock": {
+      "containerClass": "mg-docs-page-blocks",
+      "class": "mg-docs-section",
+      "subsectionClass": "mg-docs-subsection"
+    },
+    "sideBar": {
+      "containerClass": "mg-docs-sidebar",
+      "headerClass": "mg-docs-header",
+      "contentsTableClass": "mg-docs-contents"
+    }
   }
 }

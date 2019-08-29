@@ -14,17 +14,18 @@ html, body {
     width: 18rem;
 }
 
-.mg-docs-page-blocks {
+.mg-docs-body {
     position: relative;
     left: 18rem;
     top: 0;
     width: 45rem;
+    min-height: 100%;
     background-color: white;
     padding: 3rem;
     padding-top: 5rem;
 }
 
-.mg-docs-page-blocks h3 {
+.mg-docs-body h3 {
     font-size: 1.5rem;
 }
 
@@ -42,8 +43,7 @@ html, body {
 
 .mg-docs-contents ul {
     list-style: none;
-    margin: 0;
-    padding: 0;
+    
 }
 
 .mg-docs-contents ul li a {
@@ -99,7 +99,7 @@ html, body {
     margin-top: 0.9rem;
 }
 
-.mg-evt-docs-search-input {
+.mg-docs-search input {
     width: 100%;
     height: 2rem;
     background-color: hsla(0, 0%, 93%, 1);
@@ -150,11 +150,76 @@ html, body {
     cursor: default;
 }
 
-.mg-docs-section {
+section {
     margin-top: -4rem;
     padding-top: 4rem;
 }
 
+section h3 {
+    margin-bottom: 0;
+    display: inline-block;
+}
+
 .hide {
     display: none;
+}
+
+.mg-docs-snippet-list {
+    margin: 0;
+    padding: 0;
+}
+
+.mg-docs-section-list {
+    margin-left: 1rem;
+    padding: 0;
+}
+
+.mg-docs-badge {
+    background-color: hsla(0, 100%, 41%, 1);
+    width: fit-content;
+    padding: 0.3rem 0.5rem;
+    color: white;
+    border-radius: 0.2rem;
+    display: inline-block;
+    margin-right: 0.4rem;
+    font-size: 0.7rem;
+    cursor: default;
+}
+
+.mg-docs-badge-row {
+    margin-bottom: 1rem;
+}
+
+.mg-docs-badge-row-filters {
+    margin-top: 1rem;
+}
+
+.mg-docs-badge-filter {
+    border-color: hsla(0, 100%, 41%, 1);
+    border-width: 2px;
+    border-style: solid;
+    color: hsla(0, 100%, 41%, 1);
+    width: fit-content;
+    padding: 0.3rem 0.5rem;
+    border-radius: 0.2rem;
+    display: inline-block;
+    margin-left: 0.4rem;
+    font-size: 0.7rem;
+    cursor: pointer;
+    transition: all 0.2s ease-out;
+}
+
+.mg-docs-badge-filter:hover {
+    background-color: hsla(0, 100%, 41%, 1);
+    color: white;
+}
+
+.mg-docs-badge-filter.active {
+    background-color: hsla(0, 100%, 41%, 1);
+    color: white;
+}
+
+.mg-docs-badge-filter.active:hover {
+    color: hsla(0, 100%, 41%, 1);
+    background-color: white;
 }
