@@ -1,3 +1,7 @@
+/**
+ * (c) 2019 MacLaurin Group
+ */
+
 module.exports = class FileClass {
   constructor() {
     this.fileName = "";

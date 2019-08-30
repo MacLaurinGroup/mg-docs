@@ -1,3 +1,7 @@
+/**
+ * (c) 2019 MacLaurin Group
+ */
+
 const DocumentSnippetSection = require('../models/DocumentSnippetSection');
 const DocumentSnippetSectionView = require('../views/DocumentSnippetSectionView') 
 
@@ -18,7 +22,8 @@ module.exports = class DocumentSnippetSectionController {
   getSectionData() {
     return {
       title: this.model.getTitle(),
-      body: this.model.getBody()
+      body: this.model.getBody(),
+      id: this.model.getId()
     }
   }
 

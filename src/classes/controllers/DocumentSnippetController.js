@@ -1,3 +1,7 @@
+/**
+ * (c) 2019 MacLaurin Group
+ */
+
 const DocumentSnippet = require('../models/DocumentSnippet');
 const DocumentSnippetView = require('../views/DocumentSnippetView') ;
 const DocumentSnippetSectionController = require('./DocumentSnippetSectionController');
@@ -33,9 +37,9 @@ module.exports = class DocumentSnippetController {
       title: this.model.getTitle(),
       body: this.model.getBody(),
       sections: this.model.getSections(),
-      tags: this.model.getTags()
+      tags: this.model.getTags(),
+      id: this.model.getId()
     };
   }
-
 
 }

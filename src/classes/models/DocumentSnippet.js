@@ -1,9 +1,14 @@
+/**
+ * (c) 2019 MacLaurin Group
+ */
+
 module.exports = class DocumentSnippet {
   constructor() {
     this.title = "";
     this.body = "";
     this.tags = [];
     this.sections = [];
+    this.id = Math.round( Math.random() * 10000 );
   }
 
   addTag(_tag) {
@@ -36,6 +41,10 @@ module.exports = class DocumentSnippet {
 
   getTags() {
     return this.tags;
+  }
+
+  getId() {
+    return this.id;
   }
   
   hasTag(_tag) {

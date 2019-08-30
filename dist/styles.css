@@ -30,7 +30,7 @@ html, body {
 }
 
 .mg-docs-contents {
-    background-color: #473636;
+    background-color: hsla(0, 14%, 15%, 1);
     height: inherit;
     padding-top: 1rem;
 }
@@ -51,6 +51,10 @@ html, body {
     text-decoration: none;
     font-size: 0.9rem;
     transition: all 0.2s;
+}
+
+.mg-docs-contents ul li a.active {
+    border-bottom: solid 2px #d10000;
 }
 
 .mg-docs-contents ul li {
@@ -214,6 +218,12 @@ section h3 {
     color: white;
 }
 
+.mg-docs-badge-filter:active {
+    background-color: hsla(0, 100%, 41%, 1);
+    color: white;
+}
+
+
 .mg-docs-badge-filter.active {
     background-color: hsla(0, 100%, 41%, 1);
     color: white;
@@ -222,4 +232,13 @@ section h3 {
 .mg-docs-badge-filter.active:hover {
     color: hsla(0, 100%, 41%, 1);
     background-color: white;
+}
+
+.mg-docs-badge-filter.active:active {
+    color: hsla(0, 100%, 41%, 1);
+    background-color: white;
+}
+
+.hide {
+    display: none;
 }

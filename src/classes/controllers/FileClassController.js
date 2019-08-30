@@ -1,3 +1,7 @@
+/**
+ * (c) 2019 MacLaurin Group
+ */
+
 const FileClass = require('../models/FileClass');
 const FileClassView = require('../views/FileClassView') 
 const fileParser = require('../utils/fileParser')
@@ -5,12 +9,12 @@ const DocumentSnippetController = require('./DocumentSnippetController');
 
 const fileClassView = new FileClassView()
 module.exports = class FileClassController {
-  constructor(_fileName, _filePath) {
+  constructor(_filePath) {
     this.model = new FileClass();
     this.view = fileClassView;
 
-    this.model.setFileName(_fileName);
-    this.model.setFilePath(_filePath + '/' + _fileName);
+    this.model.setFilePath(_filePath);
+    this.model.setFileName( _filePath.split('/').pop() );
 
   }
 

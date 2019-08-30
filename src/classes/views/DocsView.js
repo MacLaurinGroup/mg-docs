@@ -1,6 +1,20 @@
+/**
+ * (c) 2019 MacLaurin Group
+ */
+
+const mgdocsJS = require('../../lib/mgdocsJS');
+const mgdocsCSS = require('../../lib/mgdocsCSS');
+
 module.exports = class MgDocsView {
   getDocumentHeader(_config) {
-    let html = `<html><head><title>${_config.pageConfig.header.title}</title>`;
+    let html = `<html><head><title>${_config.pageConfig.header.title}</title>
+      <script
+      src="https://code.jquery.com/jquery-3.4.1.min.js"
+      integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+      crossorigin="anonymous"></script>
+      <script>${mgdocsJS}</script>
+      <style>${mgdocsCSS}</style>
+    `;
 
     _config.pageConfig.header.jsFiles.forEach(jsFile => {
       html += `<script src="${jsFile}"></script>`;

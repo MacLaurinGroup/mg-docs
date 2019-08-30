@@ -12,8 +12,8 @@
       "title": "MG Docs",
       "heading": "mg-docs demo",
       "introText": "This documentation has been generated automatically.",
-      "jsFiles": ["./jquery.min.js", "./index.js"],
-      "cssFiles": ["./styles.css"]
+      "jsFiles": [],
+      "cssFiles": []
     },
     "pageBlock": {
       "containerClass": "mg-docs-page-blocks",

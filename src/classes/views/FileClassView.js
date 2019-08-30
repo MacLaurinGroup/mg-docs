@@ -1,7 +1,8 @@
-module.exports = class FileClassView {
-  constructor() {
+/**
+ * (c) 2019 MacLaurin Group
+ */
 
-  }
+module.exports = class FileClassView {
 
   getHTML(_options) {
     let html = ``;
@@ -24,7 +25,5 @@ module.exports = class FileClassView {
   getCloseFileContainerHTML() {
     return `</section>`
   }
-
-
 
 }
