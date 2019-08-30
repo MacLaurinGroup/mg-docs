@@ -13,7 +13,7 @@ There is a sample `config.json` file in `src` folder which has parameters you ca
 Params that should be in the `config.json` are as follows:
 
 Parameter | Required | Description | Example
------------- | ---------
+------------ | --------- | ------ | ------
 `outputFile` | true | specifies a file path for the index file to be created | `"./path/to/index.html"`
 `inputDir` | true | specifies a directory path for the tool to look through | `"./path/to/folder"`
 `includeTags` | false | an array of tags to include, if empty all snippets will be included | `["dev", "admin"]`
