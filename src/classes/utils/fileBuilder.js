@@ -22,7 +22,10 @@ class FileBuilder {
     html += docsView.getHeaderBarHTML(_config);
     html += docsView.getOpenDocsBodyContainer();
     html += docsView.getHeadingTextHTML(_config.pageConfig);
-    html += docsView.getTagsFilterHTML( this.getAllTags(_fileInsts) );
+
+    if(_config.showTags) {
+      html += docsView.getTagsFilterHTML( this.getAllTags(_fileInsts) );
+    }
 
     let filters = null;
 
@@ -39,7 +42,7 @@ class FileBuilder {
 
       const snippets = fileInst.getSnippets(filters);
 
-      html += fileInst.getHTML(snippets);
+      html += fileInst.getHTML(snippets, _config);
 
     });
     html += docsView.getCloseDocsBodyContainer();

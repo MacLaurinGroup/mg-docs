@@ -60,8 +60,8 @@ module.exports = class FileClassController {
     return includedSnippets;
   }
 
-  getHTML(_snippets) {
-    return this.view.getHTML({snippets: _snippets, fileName: this.model.getFileName()});
+  getHTML(_snippets, _config) {
+    return this.view.getHTML({snippets: _snippets, fileName: this.model.getFileName(), config: _config});
   }
   
 }

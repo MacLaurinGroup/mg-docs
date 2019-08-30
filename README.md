@@ -18,6 +18,7 @@ Parameter | Required | Description | Example
 `inputDir` | true | specifies a directory path for the tool to look through | `"./path/to/folder"`
 `includeTags` | false | an array of tags to include, if empty all snippets will be included | `["dev", "admin"]`
 `excludeTags` | false | an array of tags to exclude | `["dev", "admin"]`
+`showTags` | false | boolean for displaying tags | 
 `pageConfig.logo.src` | false | specifies a file source for the logo | `"./path/to/img.jpg"`
 `pageConfig.logo.url` | false | specifies a url for the target link of the logo | `"http://maclaurin.group"`
 `pageConfig.header.title` | false | title for the page |

@@ -3,6 +3,7 @@
   "inputDir": "./test",
   "includeTags": [],
   "excludeTags": [],
+  "showTags": true,
   "pageConfig": {
     "logo": {
       "url": "http://maclaurin.group",

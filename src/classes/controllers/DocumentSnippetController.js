@@ -28,8 +28,8 @@ module.exports = class DocumentSnippetController {
     return this.model.hasTag(_tag);
   }
 
-  getHTML() {
-    return this.view.getHTML(this.getSnippetData());
+  getHTML(_options) {
+    return this.view.getHTML( Object.assign({}, this.getSnippetData(), _options) );
   }
 
   getSnippetData() {

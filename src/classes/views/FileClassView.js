@@ -10,7 +10,7 @@ module.exports = class FileClassView {
     html += this.getOpenFileContainerHTML({id: _options.fileName});
 
     _options.snippets.forEach(snippetInst => {
-      html += snippetInst.getHTML();
+      html += snippetInst.getHTML(_options.config);
     });
 
     html += this.getCloseFileContainerHTML();
