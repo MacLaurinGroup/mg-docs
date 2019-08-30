@@ -8,11 +8,7 @@ npm install mg-docs --save-dev
 ```
 
 ## Configuration
-<<<<<<< Updated upstream
-There is a sample `config.json` in the root folder which has parameters you can set up to configure the end documentation page.
-=======
 There is a sample `config.json` file in `src` folder which has parameters you can set up to customize the end documentation page.
->>>>>>> Stashed changes
 
 The following params are necessary for the program to run.
 
@@ -23,13 +19,19 @@ inputDir | should point to the folder with html files for the program to run thr
 
 The following params are to help with customizing the end documentation page.
 
-Parameter | Description
+Parameter | Required | Description | Example
 ------------ | ---------
-page | contains parameters that allow you to set the title, heading and heading paragraph text of the document.
-pageBlock | contains parameters that allow you to set up custom CSS classes to the documentation elements.
-sideBar | contains parameters that allow you to set up custom CSS classes to the side bar elements.
-logo | contains src and url parameters that allow you to set the logo's source and the url link for clicking the logo.
-
+`outputFile` | true | specifies a file path for the index file to be created | `"./path/to/index.html"`
+`inputDir` | true | specifies a directory path for the tool to look through | `"./path/to/folder"`
+`includeTags` | false | an array of tags to include, if empty all snippets will be included | `["dev", "admin"]`
+`excludeTags` | false | an array of tags to exclude | `["dev", "admin"]`
+`pageConfig.logo.src` | false | specifies a file source for the logo | `"./path/to/img.jpg"`
+`pageConfig.logo.url` | false | specifies a url for the target link of the logo | `"http://maclaurin.group"`
+`pageConfig.header.title` | false | title for the page |
+`pageConfig.header.heading` | false | heading text for the page | 
+`pageConfig.header.introText` | false | heading paragraph for the page |
+`pageConfig.header.jsFiles` | false | an array of file paths pointing to js files to be included | `["./jsfile.js", "./jsfile2.js"]`
+`pageConfig.header.cssFiles` | false | an array of file paths pointing to css files to be included | `["./cssfile.css"]`
 
 ## To build
 
