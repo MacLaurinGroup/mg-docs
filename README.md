@@ -34,7 +34,7 @@ In order to build the html file with the documentation you will need to configur
 ```
 ...
     "scripts": {
-        "build": "node src/index.js your/new/path.json
+        "build-docs": "node ./node_modules/mg-docs/index.js your/new/path.json"
     }
 ...
 ```

@@ -7,22 +7,30 @@ const mgdocsCSS = require('../../lib/mgdocsCSS');
 
 module.exports = class MgDocsView {
   getDocumentHeader(_config) {
-    let html = `<html><head><title>${_config.pageConfig.header.title}</title>
-      <script
-      src="https://code.jquery.com/jquery-3.4.1.min.js"
-      integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
-      crossorigin="anonymous"></script>
-      <script>${mgdocsJS}</script>
-      <style>${mgdocsCSS}</style>
-    `;
+    let html = `<html><head><title>${_config.pageConfig.header.title}</title>`;
 
-    _config.pageConfig.header.jsFiles.forEach(jsFile => {
-      html += `<script src="${jsFile}"></script>`;
-    });
+    if(_config.jqueryFile && _config.jqueryFile.length > 0) {
+      html += `
+        <script
+        src="https://code.jquery.com/jquery-3.4.1.min.js"
+        integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+        crossorigin="anonymous"></script>
+      `;
+    }
 
-    _config.pageConfig.header.cssFiles.forEach(cssFile => {
-      html += `<link rel="stylesheet" href="${cssFile}">`;
-    });
+    html +=`<script>${mgdocsJS}</script><style>${mgdocsCSS}</style>`
+
+    if(_config.jsFiles) {
+      _config.jsFiles.forEach(jsFile => {
+        html += `<script src="${jsFile}"></script>`;
+      });
+    }
+
+    if(_config.cssFiles) {
+      _config.cssFiles.forEach(cssFile => {
+        html += `<link rel="stylesheet" href="${cssFile}">`;
+      });
+    }
 
     html += `</head><body>`;
 

@@ -1,6 +1,7 @@
 {
-  "outputFile": "./dist/index.html",
-  "inputDir": "./test",
+  "jqueryFile": "",
+  "jsFiles": [],
+  "cssFiles": [],
   "includeTags": [],
   "excludeTags": [],
   "showTags": true,
@@ -12,9 +13,7 @@
     "header": {
       "title": "MG Docs",
       "heading": "mg-docs demo",
-      "introText": "This documentation has been generated automatically.",
-      "jsFiles": [],
-      "cssFiles": []
+      "introText": "This documentation has been generated automatically."
     }
   }
 }

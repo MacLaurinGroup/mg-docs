@@ -10,8 +10,8 @@ const ContentsView = require('../views/ContentsView');
 const writeFile = util.promisify(fs.writeFile)
 
 class FileBuilder {
-  async buildFile(_fileInsts, _config) {
-    await writeFile(_config.outputFile, this.buildHTML(_fileInsts, _config));
+  async buildFile(_fileInsts, _config, _outputFile) {
+    await writeFile( _outputFile, this.buildHTML(_fileInsts, _config) );
   }
 
   buildHTML(_fileInsts, _config) {

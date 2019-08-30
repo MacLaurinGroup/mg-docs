@@ -82,8 +82,6 @@ html, body {
 }
 
 .mg-docs-header img {
-  height: 4rem;
-  margin: 0rem 0 0 0.5rem;
 }
 
 .mg-docs-header h1 {

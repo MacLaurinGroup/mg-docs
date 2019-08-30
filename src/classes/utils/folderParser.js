@@ -9,7 +9,6 @@ const stats = utils.promisify(fs.lstat);
 
 const parseFolder = async _filePath => {
   let filePaths = [];
-
   const files = await readdir(_filePath);
 
   for(let i = 0; i < files.length; i++) {
