@@ -1,6 +1,6 @@
 {
   "name": "mg-docs",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Simple documentation generator written in Node that allows you to write documentation on a page by page basis.",
   "main": "src/index.js",
   "scripts": {
