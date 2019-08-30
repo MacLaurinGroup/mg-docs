@@ -6,6 +6,9 @@
   "scripts": {
     "build": "node src/index.js ../config.json"
   },
+  "publishConfig": {
+    "registry": "https://registry.npmjs.com"
+  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/MacLaurinGroup/mg-docs.git"
