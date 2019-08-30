@@ -2,15 +2,16 @@ module.exports = `
 html, body {
   margin: 0;
   padding: 0;
-  font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";
+  font-family: "Lato","proxima-nova","Helvetica Neue",Arial,sans-serif;;
   background: #f7f6f6;
   scroll-behavior: smooth;
+  font-size: 16px;
 }
 
 .mg-docs-sidebar {
   position: fixed;
   left: 0;
-  top: 3.5rem;
+  top: 0;
   height: 100%;
   width: 18rem;
 }
@@ -23,7 +24,7 @@ html, body {
   min-height: 100%;
   background-color: white;
   padding: 3rem;
-  padding-top: 5rem;
+  padding-top: 1rem;
 }
 
 .mg-docs-body h3 {
@@ -31,7 +32,7 @@ html, body {
 }
 
 .mg-docs-contents {
-  background-color: hsla(0, 14%, 15%, 1);
+  background-color: #404040;
   height: inherit;
   padding-top: 1rem;
 }
@@ -55,7 +56,7 @@ html, body {
 }
 
 .mg-docs-contents ul li a.active {
-  border-bottom: solid 2px #d10000;
+  border-bottom: solid 2px #2980b9;
 }
 
 .mg-docs-contents ul li {
@@ -69,93 +70,6 @@ html, body {
 
 .mg-docs-subsection h3 {
   font-size: 1.2rem;
-}
-
-.mg-docs-header {
-  background-color: hsl(0, 0%, 100%);
-  position: fixed;
-  top: 0;
-  width: 100%;
-  z-index: 999;
-  height: 4rem;
-  box-shadow: #0000006e 0px 3px 10px;
-}
-
-.mg-docs-header img {
-}
-
-.mg-docs-header h1 {
-  margin: 0;
-  margin-bottom: 4rem;
-  color: white;
-}
-
-
-/* SEARCH BAR */
-
-.mg-docs-search {
-  display: inline-block;
-  position: absolute;
-  left: 50%;
-  width: 25rem;
-  margin-left: -12.5rem;
-  margin-top: 0.9rem;
-}
-
-.mg-docs-search input {
-  width: 100%;
-  height: 2rem;
-  background-color: hsla(0, 0%, 93%, 1);
-  border: none;
-  padding-left: 1rem;
-  border-radius: 0.2rem;
-}
-
-.mg-evt-docs-search-button button {
-  display: inline-block;
-  margin-bottom: 0;
-  text-align: center;
-  -ms-touch-action: manipulation;
-  touch-action: manipulation;
-  cursor: pointer;
-  background-color: #fff;
-  border: 1px solid #ccc;
-  line-height: 1.25;
-  padding: .5rem .75rem;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
-  color: #555;
-}
-
-.mg-docs-search-results {
-  width: 25rem;
-  background-color: white;
-  position: absolute;
-  top: 2rem;
-  margin-left: -1px;
-  border: 1px solid #e8e9ed;
-}
-
-.mg-docs-search-results a {
-  text-decoration: none;
-}
-
-.mg-evt-docs-search-result {
-  list-style: none;
-  padding: 0.4rem 0.3rem;
-  color: black;
-}
-
-.mg-evt-docs-search-result:hover {
-  background-color:#e4e4e4;
-  cursor: default;
-}
-
-section {
-  margin-top: -4rem;
-  padding-top: 4rem;
 }
 
 section h3 {
@@ -178,7 +92,7 @@ section h3 {
 }
 
 .mg-docs-badge {
-  background-color: hsla(0, 100%, 41%, 1);
+  background-color: #2980b9;
   width: fit-content;
   padding: 0.3rem 0.5rem;
   color: white;
@@ -198,10 +112,10 @@ section h3 {
 }
 
 .mg-docs-badge-filter {
-  border-color: hsla(0, 100%, 41%, 1);
+  border-color: #2980b9;
   border-width: 2px;
   border-style: solid;
-  color: hsla(0, 100%, 41%, 1);
+  color: #2980b9;
   width: fit-content;
   padding: 0.3rem 0.5rem;
   border-radius: 0.2rem;
@@ -213,32 +127,42 @@ section h3 {
 }
 
 .mg-docs-badge-filter:hover {
-  background-color: hsla(0, 100%, 41%, 1);
+  background-color: #2980b9;
   color: white;
 }
 
 .mg-docs-badge-filter:active {
-  background-color: hsla(0, 100%, 41%, 1);
+  background-color: #2980b9;
   color: white;
 }
 
 
 .mg-docs-badge-filter.active {
-  background-color: hsla(0, 100%, 41%, 1);
+  background-color: #2980b9;
   color: white;
 }
 
 .mg-docs-badge-filter.active:hover {
-  color: hsla(0, 100%, 41%, 1);
+  color: #2980b9;
   background-color: white;
 }
 
 .mg-docs-badge-filter.active:active {
-  color: hsla(0, 100%, 41%, 1);
+  color: #2980b9;
   background-color: white;
 }
 
 .hide {
   display: none;
+}
+
+.mg-docs-sidebar-header {
+  background-color: #2980b9;
+  padding: 2rem 1rem;
+  color: white;
+}
+
+.mg-docs-sidebar-header h1 {
+  margin: 0;
 }
 `

@@ -19,7 +19,6 @@ class FileBuilder {
     const docsView = new DocsView();
     const contentsView = new ContentsView();
     html += docsView.getDocumentHeader(_config);
-    html += docsView.getHeaderBarHTML(_config);
     html += docsView.getOpenDocsBodyContainer();
     html += docsView.getHeadingTextHTML(_config.pageConfig);
 
@@ -49,11 +48,11 @@ class FileBuilder {
     const sortedSnippets = this.sortSnippets( allSnippets );
 
     sortedSnippets.forEach(snippet => {
-      html += snippet.getHTML();
+      html += snippet.getHTML(_config);
     });
 
     html += docsView.getCloseDocsBodyContainer();
-    html += contentsView.getHTML(sortedSnippets);
+    html += contentsView.getHTML(sortedSnippets, _config);
     html += docsView.getDocumentFooter();
 
     return html;
