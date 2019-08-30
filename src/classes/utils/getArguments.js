@@ -4,13 +4,13 @@ module.exports = processArguments => {
   for(let i = 0; i < processArguments.length; i++) {
     switch(processArguments[i]) {
       case '--input-dir':
-        args.inputDir = commandLinePath + '/' + processArguments[i + 1].trim();
+        args.inputDir = processArguments[i + 1].trim();
         break;
       case '--config-file':
-        args.configFile = commandLinePath + '/' + processArguments[i + 1].trim();
+        args.configFile = processArguments[i + 1].trim();
         break;
       case '--output-file':
-        args.outputFile = commandLinePath + '/' + processArguments[i + 1].trim();
+        args.outputFile = processArguments[i + 1].trim();
         break;
     }
   }
@@ -25,6 +25,18 @@ module.exports = processArguments => {
 
   if(!args.outputFile) {
     throw new Error('Output file is missing!');
+  }
+
+  if(args.inputDir.charAt(0) !== '/') {
+    args.inputDir = commandLinePath + '/' + args.inputDir;
+  }
+
+  if(args.configFile.charAt(0) !== '/') {
+    args.configFile = commandLinePath + '/' + args.configFile;
+  }
+
+  if(args.configFile.charAt(0) !== '/') {
+    args.configFile = commandLinePath + '/' + args.configFile;
   }
 
   return args;
