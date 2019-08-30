@@ -48,22 +48,28 @@ npm run build
 An example of a documentation snippet in an html file:
 ```
 <mg:docs>
-  <mg:title>Docs header</mg:title>
-  <mg:body>
-    docs body
+	<mg:tag>Admin</mg:tag>
+	<mg:tag>Developer</mg:tag>
+
+	<mg:title>mgdocs</mg:title>
+	<mg:body>
+    snippet body
+
     <mg:section>
-      <mg:sectionhead>Subsection A</mg:sectionhead>
-      <mg:sectionbody>
-	this is subsection A body
-      </mg:sectionbody>
+			<mg:sectiontitle>mgdocs subsection</mg:sectiontitle>
+			<mg:sectionbody>
+	    	this is a subsection body
+			</mg:sectionbody>
     </mg:section>
+
     <mg:section>
-      <mg:sectionhead>Subsection B</mg:sectionhead>
-      <mg:sectionbody>
-	this is subsection B body
-      </mg:sectionbody>
+			<mg:sectiontitle>Subsection B</mg:sectiontitle>
+			<mg:sectionbody>
+	    	this is a subsection body
+			</mg:sectionbody>
     </mg:section>
-  </mg:body>
+
+	</mg:body>
 </mg:docs>
 ```
 
