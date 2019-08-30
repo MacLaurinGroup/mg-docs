@@ -1,3 +1,7 @@
+/**
+ * (c) 2019 MacLaurin Group
+ */
+
 module.exports = (config) => {
     if(!config.outputFile || config.outputFile.length === 0) {
         throw new Error('Missing output file in config!');

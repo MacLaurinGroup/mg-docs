@@ -38,24 +38,11 @@ module.exports = class MgDocsView {
       <div class="mg-docs-header">
         <a href="${_config.pageConfig.logo.url}" target="_blank"><img src="${_config.pageConfig.logo.src}"></a>`;
 
-    html += this.getSearchBarHTML();
     html += `</div>`;
 
     return html;
   }
-
-  getSearchBarHTML(_config, _data) {
-    let html = `
-    <div class="mg-docs-search">
-      <div>
-        <input class="mg-docs-search-input" type="search" placeholder="Search" autocomplete="off">
-      </div>
-      <div class="mg-docs-search-results"></div>
-    </div>`;
-
-    return html;
-  }
-
+  
   getOpenDocsBodyContainer() {
     return `<div class="mg-docs-body">`;
   }

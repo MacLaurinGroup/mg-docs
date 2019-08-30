@@ -14,16 +14,6 @@
       "introText": "This documentation has been generated automatically.",
       "jsFiles": [],
       "cssFiles": []
-    },
-    "pageBlock": {
-      "containerClass": "mg-docs-page-blocks",
-      "class": "mg-docs-section",
-      "subsectionClass": "mg-docs-subsection"
-    },
-    "sideBar": {
-      "containerClass": "mg-docs-sidebar",
-      "headerClass": "mg-docs-header",
-      "contentsTableClass": "mg-docs-contents"
     }
   }
 }

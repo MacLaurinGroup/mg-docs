@@ -1,3 +1,7 @@
+/**
+ * (c) 2019 MacLaurin Group
+ */
+
 const fs = require('fs');
 const utils = require('util');
 const readdir = utils.promisify(fs.readdir);
