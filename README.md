@@ -10,14 +10,7 @@ npm install mg-docs --save-dev
 ## Configuration
 There is a sample `config.json` file in `src` folder which has parameters you can set up to customize the end documentation page.
 
-The following params are necessary for the program to run.
-
-Parameter | Description
------------- | ---------
-outputFile | should point to a html file where the documentation will be created
-inputDir | should point to the folder with html files for the program to run through
-
-The following params are to help with customizing the end documentation page.
+Params that should be in the `config.json` are as follows:
 
 Parameter | Required | Description | Example
 ------------ | ---------
