@@ -29,6 +29,8 @@ class FileBuilder {
 
     let filters = null;
 
+    let allSnippets = [];
+
     _fileInsts.forEach(fileInst => {
       if(_config.includeTags.length > 0 || _config.excludeTags.length > 0) {
         filters = {};
@@ -40,11 +42,16 @@ class FileBuilder {
         }
       }
 
-      const snippets = fileInst.getSnippets(filters);
-
-      html += fileInst.getHTML(snippets, _config);
+      allSnippets = allSnippets.concat( fileInst.getSnippets(filters) );
 
     });
+
+    const sortedSnippets = this.sortSnippets( allSnippets );
+
+    sortedSnippets.forEach(snippet => {
+      html += snippet.getHTML();
+    });
+
     html += docsView.getCloseDocsBodyContainer();
     html += contentsView.getHTML(_fileInsts, filters);
     html += docsView.getDocumentFooter();
@@ -64,6 +71,22 @@ class FileBuilder {
     });
 
     return tags;
+  }
+
+  sortSnippets(_snippets) {
+    return _snippets.sort((snippetA, snippetB) => {
+      const snippetAOrder = snippetA.getSnippetData().order;
+      const snippetBOrder = snippetB.getSnippetData().order;
+
+      if(snippetAOrder < snippetBOrder) {
+        return -1;
+      }
+
+      if(snippetAOrder > snippetBOrder) {
+        return 1;
+      }
+      return 0;
+    });
   }
 }
 

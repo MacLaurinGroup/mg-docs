@@ -6,6 +6,7 @@ module.exports = class DocumentSnippet {
   constructor() {
     this.title = "";
     this.body = "";
+    this.order = 0;
     this.tags = [];
     this.sections = [];
     this.id = Math.round( Math.random() * 10000 );
@@ -27,6 +28,10 @@ module.exports = class DocumentSnippet {
     this.body = _body;
   }
 
+  setOrder(_order) {
+    this.order = _order;
+  }
+
   getTitle() {
     return this.title;
   }
@@ -45,6 +50,10 @@ module.exports = class DocumentSnippet {
 
   getId() {
     return this.id;
+  }
+
+  getOrder() {
+    return this.order;
   }
   
   hasTag(_tag) {

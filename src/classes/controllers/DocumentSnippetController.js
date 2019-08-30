@@ -11,9 +11,9 @@ module.exports = class DocumentSnippetController {
   constructor(_snippetData) {
     this.model = new DocumentSnippet();
     this.view = documentSnippetView;
-
     this.model.setTitle(_snippetData.title);
     this.model.setBody(_snippetData.body);
+    this.model.setOrder(_snippetData.order);
 
     _snippetData.sections.forEach(section => {
       this.model.addSection(new DocumentSnippetSectionController(section));
@@ -38,6 +38,7 @@ module.exports = class DocumentSnippetController {
       body: this.model.getBody(),
       sections: this.model.getSections(),
       tags: this.model.getTags(),
+      order: this.model.getOrder(),
       id: this.model.getId()
     };
   }

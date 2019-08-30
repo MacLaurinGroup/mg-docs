@@ -26,7 +26,9 @@ class FileParser {
       snippetObj.title = this._getTitle(snippet);
       snippetObj.body = this._getBody(snippet);
       snippetObj.sections = this._getSections(snippet);
-      snippetObj.tags = this._getTags(snippet)
+      snippetObj.tags = this._getTags(snippet);
+      snippetObj.order = this._getOrder(snippet);
+
       snippetsArr.push(snippetObj);
     })
     return snippetsArr;
@@ -103,6 +105,16 @@ class FileParser {
     }
 
     return [];
+  }
+
+  _getOrder(_data) {
+    const order = _data.match(/\<mg\-order\>((?!\<\/mg\-order\>).|\s)*\<\/mg\-order\>/gm);
+
+    if(order) {
+      return Number(order[0].substring(10, order[0].length - 11).trim());
+    }
+
+    return 9999999999;
   }
 }
 
