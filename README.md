@@ -49,19 +49,24 @@ npm run build
 An example of a documentation snippet in an html file:
 ```
 <mg:docs>
-  <mg:title>Docs header</mg:title>
+  <mg:tag>Admin</mg:tag>
+  <mg:tag>Developer</mg:tag>
+
+  <mg:title>mgdocs</mg:title>
   <mg:body>
-    docs body
+    snippet body
+
     <mg:section>
-      <mg:sectionhead>Subsection A</mg:sectionhead>
+      <mg:sectiontitle>mgdocs subsection</mg:sectiontitle>
       <mg:sectionbody>
-	this is subsection A body
+        this is a subsection body
       </mg:sectionbody>
     </mg:section>
+
     <mg:section>
-      <mg:sectionhead>Subsection B</mg:sectionhead>
+      <mg:sectiontitle>Subsection B</mg:sectiontitle>
       <mg:sectionbody>
-	this is subsection B body
+        this is a subsection body
       </mg:sectionbody>
     </mg:section>
   </mg:body>
