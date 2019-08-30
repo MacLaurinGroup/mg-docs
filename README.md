@@ -26,19 +26,10 @@ Parameter | Required | Description | Example
 
 ## To build
 
-In order to build the html file with the documentation you will need to configure the `config.json` shown above. You will also need to specify the input directory
+In order to build the html file with the documentation you will need to configure the `config.json` shown above. You will also need to specify the input directory, output file and the config file by running:
 
 ```
-...
-    "scripts": {
-        "build-docs": "node ./node_modules/mg-docs/index.js --config-file your/new/path.json --input-dir ./input/ --output-file ./output.html"
-    }
-...
-```
-
-then you can run: 
-```
-npm run build-docs
+node ./node_modules/mg-docs/index.js --config-file your/new/path.json --input-dir ./input/ --output-file ./output.html
 ```
 
 
