@@ -20,8 +20,6 @@ Parameter | Required | Description | Example
 `jsFiles` | false | an array of file paths pointing to js files to be included | `["./jsfile.js", "./jsfile2.js"]`
 `cssFiles` | false | an array of file paths pointing to css files to be included | `["./cssfile.css"]`
 `jqueryFile` | false | file path to the jquery file, if blank it will use jquerys CDN | 
-`pageConfig.logo.src` | false | specifies a file source for the logo | `"./path/to/img.jpg"`
-`pageConfig.logo.url` | false | specifies a url for the target link of the logo | `"http://maclaurin.group"`
 `pageConfig.header.title` | false | title for the page |
 `pageConfig.header.heading` | false | heading text for the page | 
 `pageConfig.header.introText` | false | heading paragraph for the page |
