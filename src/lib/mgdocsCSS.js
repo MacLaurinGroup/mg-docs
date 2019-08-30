@@ -8,6 +8,10 @@ html, body {
   font-size: 16px;
 }
 
+#top h1 {
+  font-size: 2.5rem;
+}
+
 .mg-docs-sidebar {
   position: fixed;
   left: 0;

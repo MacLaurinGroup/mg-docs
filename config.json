@@ -6,10 +6,6 @@
   "excludeTags": [],
   "showTags": true,
   "pageConfig": {
-    "logo": {
-      "url": "http://maclaurin.group",
-      "src": ""
-    },
     "header": {
       "title": "MG Docs",
       "heading": "mg-docs demo",
