@@ -10,6 +10,14 @@ module.exports = class MgDocsView {
     let html = `<html><head><title>${_config.pageConfig.header.title}</title>`;
 
     if(_config.jqueryFile && _config.jqueryFile.length > 0) {
+      let jqueryPath = _config.jqueryFile;
+
+      if(_config.jqueryFile.charAt(0) !== '/') {
+        jqueryPath = process.cwd() + '/' + jqueryPath;
+      }
+
+      html += `<script src="${jqueryPath}"></script>`;
+    } else {
       html += `
         <script
         src="https://code.jquery.com/jquery-3.4.1.min.js"

@@ -14,6 +14,7 @@ module.exports = class DocumentSnippetController {
     this.model.setTitle(_snippetData.title);
     this.model.setBody(_snippetData.body);
     this.model.setOrder(_snippetData.order);
+    this.model.setId(_snippetData.id);
 
     _snippetData.sections.forEach(section => {
       this.model.addSection(new DocumentSnippetSectionController(section));

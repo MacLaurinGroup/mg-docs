@@ -4,22 +4,22 @@
 
 module.exports = class DocumentSnippetView {
 
-  getHTML(_options) {
-    let html = `<section id="${_options.title.replace(/ /gm, '_')}${_options.id}" class="mg-docs-snippet"><h3>${_options.title}</h3>`;
+  getHTML(_snippetData) {
+    let html = `<section id="${_snippetData.id}" class="mg-docs-snippet"><h3>${_snippetData.title}</h3>`;
 
-    if(_options.showTags) {
+    if(_snippetData.showTags) {
       html += `<div class="mg-docs-badge-row">`;
-      _options.tags.forEach(tag => {
+      _snippetData.tags.forEach(tag => {
         html += `<div class="mg-docs-badge">${tag}</div>`
       })
       html += `</div>`
     }
     
-    html += `<div>${_options.body}</div>`
+    html += `<div>${_snippetData.body}</div>`;
 
-    _options.sections.forEach(sectionInst => {
+    _snippetData.sections.forEach(sectionInst => {
       html += sectionInst.getHTML();
-    })
+    });
     
     html += `</section>`;
 

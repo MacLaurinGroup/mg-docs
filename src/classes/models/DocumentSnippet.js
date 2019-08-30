@@ -9,7 +9,7 @@ module.exports = class DocumentSnippet {
     this.order = 0;
     this.tags = [];
     this.sections = [];
-    this.id = Math.round( Math.random() * 10000 );
+    this.id = '';
   }
 
   addTag(_tag) {
@@ -30,6 +30,10 @@ module.exports = class DocumentSnippet {
 
   setOrder(_order) {
     this.order = _order;
+  }
+  
+  setId(_id) {
+    this.id = _id;
   }
 
   getTitle() {

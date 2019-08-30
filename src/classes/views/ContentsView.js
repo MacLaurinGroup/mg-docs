@@ -3,14 +3,12 @@
  */
 
 module.exports = class ContentsView {
-  getHTML(_fileInsts, filters) {
+  getHTML(_snippets) {
     let html = `<div class="mg-docs-sidebar"><div class="mg-docs-contents"><h3>Contents</h3><ul class="mg-docs-snippet-list">
     <li><a href="#top" class="mg-docs-contents-snippet" data-tags="">Back to top</a></li>
     `
 
-    _fileInsts.forEach(fileInst => {
-      const snippets = fileInst.getSnippets(filters);
-      snippets.forEach(snippetInst => {
+    _snippets.forEach(snippetInst => {
         const snippetData = snippetInst.getSnippetData();
         html += `<li>
           <a
@@ -23,8 +21,6 @@ module.exports = class ContentsView {
         if(snippetData.sections.length > 0) {
           html += this.getSectionListHTML(snippetData);
         }
-      });
-
     })
 
     html += `</ul></div></div>`

@@ -8,7 +8,7 @@
   "pageConfig": {
     "logo": {
       "url": "http://maclaurin.group",
-      "src": "./logo.png"
+      "src": ""
     },
     "header": {
       "title": "MG Docs",

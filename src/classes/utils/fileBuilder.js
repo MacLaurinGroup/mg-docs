@@ -53,7 +53,7 @@ class FileBuilder {
     });
 
     html += docsView.getCloseDocsBodyContainer();
-    html += contentsView.getHTML(_fileInsts, filters);
+    html += contentsView.getHTML(sortedSnippets);
     html += docsView.getDocumentFooter();
 
     return html;

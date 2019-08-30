@@ -28,6 +28,7 @@ class FileParser {
       snippetObj.sections = this._getSections(snippet);
       snippetObj.tags = this._getTags(snippet);
       snippetObj.order = this._getOrder(snippet);
+      snippetObj.id = this._getId(snippet);
 
       snippetsArr.push(snippetObj);
     })
@@ -115,6 +116,16 @@ class FileParser {
     }
 
     return 9999999999;
+  }
+
+  _getId(_data) {
+    const id = _data.match(/\<mg\-id\>((?!\<\/mg\-id\>).|\s)*\<\/mg\-id\>/gm);
+    
+    if(id) {
+      return id[0].substring(7, id[0].length - 8).trim();
+    }
+
+    return String(Math.round( Math.random() * 10000 ));
   }
 }
 
