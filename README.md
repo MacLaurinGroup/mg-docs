@@ -68,7 +68,6 @@ An example of a documentation snippet in an html file:
 	    	this is a subsection body
 			</mg:sectionbody>
     </mg:section>
-
 	</mg:body>
 </mg:docs>
 ```
