@@ -59,10 +59,10 @@ class FileParser {
   }
 
   _getBody(_data) {
-    const bodyTag = _data.match(/<mg\-body>[A-Za-z0-9;.,!"'£$%^&*()\-+=\/\\<>: \n]+<\/mg\-body>/gm);
+    const bodyTag = _data.match(/<mg\-body>[A-Za-z0-9;.,!"'£$%^&*()\-+=\/\\<>: \n\t]+<\/mg\-body>/gm);
 
     if(bodyTag) {
-      const body = bodyTag[0].replace(/<mg\-section>[A-Za-z0-9;.,!"'£$%^&*()\-+=\/\\<>: \n]+<\/mg\-section>/gm, '');
+      const body = bodyTag[0].replace(/<mg\-section>[A-Za-z0-9;.,!"'£$%^&*()\-+=\/\\<>: \n\t]+<\/mg\-section>/gm, '');
       return body.substring(9, body.length - 10).trim();
     }
 
@@ -76,8 +76,8 @@ class FileParser {
 
       sections.forEach(section => {
         const sectionObj = {}
-        let title = section.match(/<mg\-sectiontitle>[A-Za-z0-9;.,!"'£$%^&*()\-+=\/\\<>: \n]+<\/mg\-sectiontitle>/gm);
-        let body = section.match(/<mg\-sectionbody>[A-Za-z0-9;.,!"£$%'^&*()\-+=\/\\<>: \n]+<\/mg\-sectionbody>/gm);
+        let title = section.match(/<mg\-sectiontitle>[A-Za-z0-9;.,!"'£$%^&*()\-+=\/\\<>: \n\t]+<\/mg\-sectiontitle>/gm);
+        let body = section.match(/<mg\-sectionbody>[A-Za-z0-9;.,!"£$%'^&*()\-+=\/\\<>: \n\t]+<\/mg\-sectionbody>/gm);
 
         if(title) {
           sectionObj.title = title[0].substring(17, title[0].length - 18).trim();
