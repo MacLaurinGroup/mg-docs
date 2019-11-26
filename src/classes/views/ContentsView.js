@@ -6,12 +6,8 @@ module.exports = class ContentsView {
   getHTML(_snippets, _config) {
     let html = `<div class="mg-docs-sidebar">`
 
-    html += `<div class="mg-docs-sidebar-header"><h1>${_config.pageConfig.header.title}</h1></div>`
-
-    html += `
-    <div class="mg-docs-contents"><h3>Contents</h3><ul class="mg-docs-snippet-list">
-    <li><a href="#top" class="mg-docs-contents-snippet" data-tags="">Back to top</a></li>
-    `
+    html += `<div class="mg-docs-sidebar-header"><h1>${_config.pageConfig.header.title}</h1></div>
+    <div class="mg-docs-contents"><h3>Contents</h3><ul class="mg-docs-snippet-list">`;
 
     _snippets.forEach(snippetInst => {
       const snippetData = snippetInst.getSnippetData();
@@ -28,7 +24,7 @@ module.exports = class ContentsView {
       }
     })
 
-    html += `</ul></div></div>`
+    html += `<li style="padding-top: 30px;"><a href="#top" class="mg-docs-contents-snippet" data-tags="" style="font-size: 0.7em">Back to top ^</a></li></ul></div></div>`
 
     return html;
   }
@@ -39,6 +35,7 @@ module.exports = class ContentsView {
       const sectionData = sectionInst.getSectionData();
       html += `<li><a href="#${sectionData.title.replace(/ /gm, '_')}${sectionData.id}">${sectionData.title}</a></li>`;
     })
+
 
     html += `</ul>`;
 
