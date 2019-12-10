@@ -4,6 +4,7 @@
 
 const mgdocsJS = require('../../lib/mgdocsJS');
 const mgdocsCSS = require('../../lib/mgdocsCSS');
+const dropins = require('../utils/dropins');
 
 module.exports = class MgDocsView {
   getDocumentHeader(_config) {
@@ -70,7 +71,7 @@ module.exports = class MgDocsView {
   getHeadingTextHTML(_options) {
     return `
       <section id="top">
-        <h1>${_options.header.heading}</h1><div>${_options.header.introText}</div>
+        <h1>${_options.header.heading}</h1><div>${dropins.process(_options.header.introText)}</div>
       </section>
     `;
   }
