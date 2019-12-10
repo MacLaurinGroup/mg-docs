@@ -18,6 +18,7 @@ html, body {
   top: 0;
   height: 100%;
   width: 18rem;
+  overflow: auto;
 }
 
 .mg-docs-body {
@@ -74,6 +75,11 @@ html, body {
 
 .mg-docs-subsection h3 {
   font-size: 1.2rem;
+}
+
+section h4 {
+  margin-top: 40px;
+  margin-bottom: 0px;
 }
 
 section h3 {
