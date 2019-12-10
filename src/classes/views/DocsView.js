@@ -3,17 +3,19 @@
  */
 
 const mgdocsJS = require('../../lib/mgdocsJS');
-const mgdocsCSS = require('../../lib/mgdocsCSS');
+const fs = require('fs');
+const path = require('path');
 const dropins = require('../utils/dropins');
 
 module.exports = class MgDocsView {
   getDocumentHeader(_config) {
+    const stylePath = path.join(__dirname, '..', '..', 'css', 'style.css');
     let html = `<html><head><title>${_config.pageConfig.header.title}</title>`;
 
-    if(_config.jqueryFile && _config.jqueryFile.length > 0) {
+    if (_config.jqueryFile && _config.jqueryFile.length > 0) {
       let jqueryPath = _config.jqueryFile;
 
-      if(_config.jqueryFile.charAt(0) !== '/') {
+      if (_config.jqueryFile.charAt(0) !== '/') {
         jqueryPath = process.cwd() + '/' + jqueryPath;
       }
 
@@ -27,15 +29,15 @@ module.exports = class MgDocsView {
       `;
     }
 
-    html +=`<script>${mgdocsJS}</script><style>${mgdocsCSS}</style>`
+    html += `<script>${mgdocsJS}</script><style>${fs.readFileSync(stylePath)}</style>`
 
-    if(_config.jsFiles) {
+    if (_config.jsFiles) {
       _config.jsFiles.forEach(jsFile => {
         html += `<script src="${jsFile}"></script>`;
       });
     }
 
-    if(_config.cssFiles) {
+    if (_config.cssFiles) {
       _config.cssFiles.forEach(cssFile => {
         html += `<link rel="stylesheet" href="${cssFile}">`;
       });
@@ -59,7 +61,7 @@ module.exports = class MgDocsView {
 
     return html;
   }
-  
+
   getOpenDocsBodyContainer() {
     return `<div class="mg-docs-body">`;
   }
