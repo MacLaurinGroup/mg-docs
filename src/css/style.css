@@ -1,4 +1,3 @@
-module.exports = `
 html, body {
   margin: 0;
   padding: 0;
@@ -175,4 +174,3 @@ section h3 {
 .mg-docs-sidebar-header h1 {
   margin: 0;
 }
-`
