@@ -2,7 +2,6 @@
  * (c) 2019 MacLaurin Group
  */
 
-const mgdocsJS = require('../../lib/mgdocsJS');
 const fs = require('fs');
 const path = require('path');
 const dropins = require('../utils/dropins');
@@ -10,6 +9,8 @@ const dropins = require('../utils/dropins');
 module.exports = class MgDocsView {
   getDocumentHeader(_config) {
     const stylePath = path.join(__dirname, '..', '..', 'css', 'style.css');
+    const jsPath = path.join(__dirname, '..', '..', 'js', 'mgdocs.js');
+
     let html = `<html><head><title>${_config.pageConfig.header.title}</title>`;
 
     if (_config.jqueryFile && _config.jqueryFile.length > 0) {
@@ -29,7 +30,7 @@ module.exports = class MgDocsView {
       `;
     }
 
-    html += `<script>${mgdocsJS}</script><style>${fs.readFileSync(stylePath)}</style>`
+    html += `<script>${fs.readFileSync(jsPath)}</script><style>${fs.readFileSync(stylePath)}</style>`
 
     if (_config.jsFiles) {
       _config.jsFiles.forEach(jsFile => {
