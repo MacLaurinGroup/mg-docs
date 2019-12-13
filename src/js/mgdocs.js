@@ -58,9 +58,14 @@ $(() => {
   window.sections = $(".mg-docs-snippet");
 
   $(window).bind("scroll", function() {
-    for (const section of window.sections) {
+    for (let i = 0; i <= window.sections.length; i++) {
+      const section = window.sections[i];
       const sectionId = $(section).attr("id");
-      if (document.getElementById(sectionId).getBoundingClientRect().top < 5) {
+
+      if (document.getElementById(sectionId).getBoundingClientRect().top > 5) {
+        const previousSection = window.sections[i - 1];
+        const previousSectionId = $(previousSection).attr("id");
+
         // Set the active section
         $(".active").removeClass("active");
         $(`[href='#${sectionId}']`).addClass("active");
@@ -73,7 +78,6 @@ $(() => {
           $(".active").parent().next().removeClass("hide");
         }
 
-      } else {
         break;
       }
     }
