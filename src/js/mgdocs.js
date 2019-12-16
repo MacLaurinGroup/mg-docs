@@ -68,7 +68,7 @@ $(() => {
 
         // Set the active section
         $(".active").removeClass("active");
-        $(`[href='#${sectionId}']`).addClass("active");
+        $(`[href='#${previousSectionId}']`).addClass("active");
 
         // Hide previous flyout
         $(".mg-docs-section-list").not(".hide").addClass("hide");
